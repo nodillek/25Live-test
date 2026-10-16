@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGU Event Request Portal</title>
+
+    <style>
+        :root {
+            --primary: #005596;
+            --primary-light: #0078d4;
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #323130;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .hero {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--primary-light)
+            );
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: .95;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-header h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        #form-container {
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: .9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Event Request Portal</h1>
+        <p>Submit your event request through 25Live.</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>25Live Event Request Form</h2>
+            </div>
+
+            <div class="card-body">
+                <div id="form-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Questions? Contact Event Services for assistance.
+    </footer>
+
+ <script src="https://25live.collegenet.com/pro/embedding-client-code/embedded25.js"></script>
+<div id="Studorg"></div>
+<script type="text/javascript">
+    embedded25.fromConfig.create("sgut", "B3A011A0-BAF1-4143-ADDD-A3E6F8F52A8D");
+</script>
+
+</body>
+</html>
